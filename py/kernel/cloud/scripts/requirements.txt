@@ -1,0 +1,4 @@
+google-cloud-batch
+google-cloud-storage
+google-cloud-functions
+functions-framework

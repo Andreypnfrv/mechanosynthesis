@@ -1,0 +1,10 @@
+CMR Adsorption Database Summary
+========================================
+
+Total data points: 25
+Columns: ['Adsorbate', 'Surface Material', 'Adsorption energy with LDA [eV]', 'Adsorption energy with PBE [eV]', 'Adsorption energy with RPBE [eV]', 'Adsorption energy with BEEF-vdW [eV]', 'Adsorption energy with vdW-DF2 [eV]', 'Adsorption energy with mBEEF [eV]', 'Adsorption energy with mBEEF-vdW [eV]', 'RPA_EXX_adsorp']
+
+Available metals:
+  H: LOW relevance
+
+Mechanosynthesis priority metals found:

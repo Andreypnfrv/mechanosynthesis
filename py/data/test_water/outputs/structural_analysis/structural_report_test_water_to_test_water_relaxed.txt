@@ -1,0 +1,24 @@
+STRUCTURAL ANALYSIS REPORT
+==================================================
+Initial structure: test_water
+Final structure: test_water_relaxed
+RMSD: 0.016 Å
+
+BOND ANALYSIS
+--------------------
+
+H-O bonds:
+  Count: 2 → 2 (+0)
+  Avg length: 0.957 → 0.983 Å (+0.026 Å)
+
+
+ANGLE ANALYSIS
+--------------------
+
+H-O-H angles:
+  Count: 1 → 1 (+0)
+  Avg angle: 104.5° → 102.2° (-2.3°)
+
+
+COORDINATION ANALYSIS
+--------------------

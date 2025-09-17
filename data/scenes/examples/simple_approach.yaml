@@ -1,0 +1,28 @@
+name: "simple_stm_approach"
+description: "Basic STM tip approaching diamond surface"
+
+pieces:
+  - name: "stm_tip"
+    source: "data/w_stm_tip_6_5/outputs/xtb/w_stm_tip_6_5_relaxed.xyz"
+    position: [0, 0, 5]  # 5Å above surface
+    
+  - name: "diamond_surface"
+    source: "data/diamond_surface_3/outputs/diamond_surface_3_relaxed.xyz" 
+    position: [0, 0, 0]  # At origin
+
+calculation:
+  method: "xtb"
+  backend: "fixed"
+  
+extract:
+  fixed:
+    - name: "modified_tip"
+      atoms: [1-50]  # Adjust based on actual tip size
+    - name: "modified_surface"
+      atoms: [51-300]  # Adjust based on actual surface size
+  
+  artifacts:
+    - method: "connectivity"
+      min_size: 1
+      max_size: 10
+      displacement_threshold: 2.0

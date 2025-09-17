@@ -1,0 +1,56 @@
+name: "cbn_si_2025"
+description: "CBN tip approaching Si surface - initial approach sequence"
+
+pieces:
+  - name: "w_tip"
+    source: "data/w_stm_tip_3_3/outputs/ptbp_dftb/w_stm_tip_3_3_relaxed.xyz"
+    position: [0, 0, 8]  # 8Å above surface
+    description: "Tungsten STM tip 3x3"
+    
+  - name: "si_surface"
+    source: "data/si_surface_3x3x3/inputs/si_surface.xyz"
+    position: [0, 0, 0]  # Surface at origin
+    description: "Silicon surface 3x3x3"
+
+calculation:
+  method: "dftb"
+  backend: "ptbp_dftb"
+  optimization: true
+  
+animation:
+  keyframes:
+    - frame: 0
+      description: "initial_separation"
+      w_tip_position: [0, 0, 8]
+      calculate: false
+      
+    - frame: 1
+      description: "approach"
+      w_tip_position: [0, 0, 5]
+      calculate: true
+      
+    - frame: 2
+      description: "contact"
+      w_tip_position: [0, 0, 3]
+      calculate: true
+
+extract:
+  fixed:
+    - name: "modified_tip"
+      piece: "w_tip"
+      description: "Tip after interaction"
+      
+    - name: "modified_surface"
+      piece: "si_surface" 
+      description: "Surface after interaction"
+      
+  artifacts:
+    - method: "connectivity"
+      min_size: 1
+      displacement_threshold: 1.5
+      description: "Detect fragments formed during interaction"
+
+output:
+  trajectory_format: ["xyz", "pdb"]
+  animation: true
+  format: ["mp4", "gif"]

@@ -1,0 +1,27 @@
+# NHTBH38 Reference Barrier Heights (kcal/mol)
+# Source: Zhao, Y.; González-García, N.; Truhlar, D. G. J. Phys. Chem. A 2005, 109, 2012-2018
+# Method: CCSD(T)/aug-cc-pVTZ//QCISD/MG3
+#
+# Reaction                          Vf (forward)  Vr (reverse)  Notes
+H + N2O → OH + N2                   17.13         82.27         Heavy atom transfer
+H + FH → HF + H                     42.18         42.18         Hydrogen atom transfer  
+H + ClH → HCl + H                   18.00         18.00         Hydrogen atom transfer
+H + FCH3 → HF + CH3                 30.38         57.02         H-abstraction from C
+H + F2 → HF + F                     2.27          105.80        Halogen exchange
+CH3 + FCl → CH3F + Cl               6.75          59.16         C-halogen formation
+F- + CH3F → FCH3 + F-               -0.34         -0.34         SN2 substitution
+Cl- + CH3Cl → ClCH3 + Cl-           3.10          3.10          SN2 substitution
+F- + CH3Cl → FCH3 + Cl-             -12.54        20.11         SN2 substitution
+OH- + CH3F → HOCH3 + F-             -2.44         17.66         SN2 substitution
+H + N2 → HN2                        14.36         10.61         Association
+H + CO → HCO                        3.17          22.68         Association
+H + C2H4 → CH3CH2                   1.72          41.75         C-H bond formation
+CH3 + C2H4 → CH3CH2CH2              6.85          32.97         C-C bond formation  
+HCN → HNC                           48.07         32.82         Isomerization
+
+# Mechanosynthesis Relevance:
+# HIGH: H + FCH3 → HF + CH3 (H-abstraction from C)
+# HIGH: H + C2H4 → CH3CH2 (C-H bond formation)  
+# HIGH: CH3 + C2H4 → CH3CH2CH2 (C-C bond formation)
+# MEDIUM: SN2 reactions (radical chemistry)
+# MEDIUM: Association reactions (radical coupling)

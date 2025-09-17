@@ -1,0 +1,77 @@
+timestamp,molecule_name,n_atoms,n_electrons,method,method_params,hardware,n_cores,wall_time_sec,memory_peak_mb,success,convergence_steps,final_energy,quality_rating,notes
+2025-09-12T23:36:58.260209,test_h2o_relax,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.43,98.7,True,,,4,Successful dftb relaxation
+2025-09-12T23:37:44.430072,w_hexamethyl,25,128,hessian-orca,"{'backend': 'orca', 'calculation_type': 'hessian', 'method': 'PBE', 'basis': 'def2-SVP'}",macOS Apple M1,4,1651.25,97.9,True,,,4,Successful orca hessian calculation
+2025-09-12T23:46:33.374420,w_hexamethyl,25,128,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.01,98.1,True,,,2,xtb relaxation completed with issues
+2025-09-12T23:46:55.265151,w_hexamethyl,25,128,relax-dftb-ptbp,{'backend': 'dftb-ptbp'},macOS Apple M1,4,11.81,97.4,True,,,4,Successful dftb-ptbp relaxation
+2025-09-12T23:47:20.941442,w_hexamethyl,25,128,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,18.25,98.0,True,,,4,Successful dftb hessian calculation
+2025-09-13T00:04:43.977501,w_hexamethyl,25,128,relax-dftb-ptbp,{'backend': 'dftb-ptbp'},macOS Apple M1,4,18.04,98.7,True,,,4,Successful dftb-ptbp relaxation
+2025-09-13T00:08:36.263617,w_stm_tip_4_5,68,5032,relax-dftb-ptbp,{'backend': 'dftb-ptbp'},macOS Apple M1,4,714.81,108.1,False,,,,
+2025-09-13T00:09:20.895476,w_stm_tip_3_3,28,2072,relax-dftb-ptbp,{'backend': 'dftb-ptbp'},macOS Apple M1,4,36.22,109.8,True,,,4,Successful dftb-ptbp relaxation
+2025-09-13T00:12:15.943066,w_stm_tip_3_3,28,2072,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,40.15,109.8,True,,,4,Successful dftb hessian calculation
+2025-09-13T11:18:13.026087,si_surface_3x3x3,62,491,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.43,104.9,False,,,1,"dftb relaxation failed: Calculator ""dftb"" failed with command ""dftb+ > si_surface.out"" failed in /Users/andreypanferov/Documents/mechanosynthesis/data/si_surface_3x3x3/temp with error code 1"
+2025-09-13T11:44:00.324082,si_surface_3x3x3_fixed,,,relax-dftb-native,{'backend': 'dftb-native'},macOS Apple M1,4,0.00,52.1,False,,,1,dftb-native relaxation failed: Project folder data/si_surface_3x3x3_fixed does not exist
+2025-09-13T11:44:13.121829,si_surface_3x3x3_fixed,,,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.00,93.6,False,,,1,xtb relaxation failed: Project folder data/si_surface_3x3x3_fixed does not exist
+2025-09-13T11:44:47.641806,si_surface_3x3x3_fixed,59,488,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.01,97.9,True,,,2,xtb relaxation completed with issues
+2025-09-13T11:44:58.098334,si_surface_3x3x3_fixed,59,488,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.22,99.7,False,,,1,"dftb relaxation failed: Calculator ""dftb"" failed with command ""dftb+ > si_surface.out"" failed in /Users/andreypanferov/Documents/mechanosynthesis/data/si_surface_3x3x3_fixed/temp with error code 1"
+2025-09-13T11:53:44.181403,test_unified_dftb,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.00,98.2,False,,,1,dftb relaxation failed: Project folder data/test_unified_dftb does not exist
+2025-09-13T11:54:53.403150,test_unified_dftb,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.01,82.1,False,,,1,dftb relaxation failed: Project folder data/test_unified_dftb does not exist
+2025-09-13T11:56:08.694978,test_unified_dftb,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.17,98.1,True,,,4,Successful dftb relaxation
+2025-09-13T12:18:21.391887,si_surface_4x4x3,112,944,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.54,98.5,False,,,,
+2025-09-13T12:26:31.563161,si_surface_4x4x3,112,944,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,477.46,98.6,True,,,4,Successful dftb relaxation
+2025-09-13T12:38:39.088022,si_surface_4x4x3_stable,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.01,89.8,False,,,1,dftb relaxation failed: Project folder data/si_surface_4x4x3_stable does not exist
+2025-09-13T12:39:22.311192,si_surface_4x4x3_stable,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.01,98.4,False,,,1,dftb relaxation failed: Project folder data/si_surface_4x4x3_stable does not exist
+2025-09-13T12:43:31.494526,water_test,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.01,93.5,False,,,1,dftb relaxation failed: Project folder data/water_test does not exist
+2025-09-13T12:59:05.617336,si_surface_4x4x3_stable,123,1371,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,888.54,98.1,True,,,4,Successful dftb relaxation
+2025-09-13T13:25:33.236252,test_h2,2,2,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.01,94.5,True,,,2,xtb relaxation completed with issues
+2025-09-13T13:28:53.476349,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.26,101.3,True,,,4,Successful dftb relaxation
+2025-09-13T13:29:16.051780,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.37,100.8,True,,,4,Successful dftb relaxation
+2025-09-13T13:29:31.569838,si_surface_4x4x3_stable,123,1371,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1071.55,98.1,True,,,4,Successful dftb relaxation
+2025-09-13T13:29:39.516900,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,7.72,247.1,True,,,4,Successful dftb relaxation
+2025-09-13T13:30:26.381451,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.40,252.5,True,,,4,Successful dftb relaxation
+2025-09-13T13:30:42.893369,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.53,253.3,True,,,4,Successful dftb relaxation
+2025-09-13T13:36:31.081695,test_water,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.56,255.4,True,,,4,Successful dftb relaxation
+2025-09-13T13:37:54.399551,test_water,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.55,257.8,True,,,4,Successful dftb relaxation
+2025-09-13T13:51:58.205070,test_water,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.33,257.2,True,,,4,Successful dftb relaxation
+2025-09-13T15:42:34.076305,test_h2,2,2,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,5.69,253.6,True,,,4,Successful dftb relaxation
+2025-09-13T15:45:11.118184,ge_ch2i4,17,276,relax-dftb-native,{'backend': 'dftb-native'},macOS Apple M1,4,0.14,98.4,True,,,4,Successful dftb-native relaxation
+2025-09-13T15:45:46.406633,ge_ch2i4,17,276,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.01,98.4,True,,,2,xtb relaxation completed with issues
+2025-09-13T15:47:52.729874,water_test,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.01,98.1,False,,,1,dftb relaxation failed: Project folder data/water_test does not exist
+2025-09-13T15:48:06.576895,test_water,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,2.13,258.0,True,,,4,Successful dftb relaxation
+2025-09-13T15:50:49.116060,test_water,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,2.55,258.0,True,,,4,Successful dftb relaxation
+2025-09-13T15:55:13.999467,ge_ch2i4_relaxed,17,276,xtb-hessian-fixed,"{'method': 'GFN2-xTB', 'backend': 'fixed', 'calculation_type': 'hessian'}",macOS Apple M1,1,2.29,98.2,True,,,4,Successful Hessian calculation
+2025-09-13T15:55:14.001342,ge_ch2i4,17,276,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,2.31,98.2,True,,,4,Successful xtb hessian calculation
+2025-09-13T16:23:27.607481,ge_ch2i4,17,276,hessian-orca-simple,"{'backend': 'orca-simple', 'calculation_type': 'hessian', 'method': 'PBE', 'basis': 'def2-SVP'}",macOS Apple M1,4,1654.45,97.9,True,,,4,Successful orca-simple hessian calculation
+2025-09-13T22:36:49.312967,test_ethylene,,,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.00,99.5,False,,,1,dftb relaxation failed: Project folder data/test_ethylene does not exist
+2025-09-13T22:37:05.180733,test_ethylene,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.15,251.2,True,,,4,Successful dftb relaxation
+2025-09-13T22:42:39.016361,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.00,256.9,True,,,4,Successful dftb relaxation
+2025-09-13T22:45:25.506312,tmp_C2H4_xtb,6,16,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.01,99.2,True,,,2,xtb relaxation completed with issues
+2025-09-13T22:47:55.961906,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.83,257.0,True,,,4,Successful dftb relaxation
+2025-09-13T22:47:56.962653,tmp_C2H4_xtb,6,16,relax-xtb,"{'backend': 'xtb', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.00,99.0,True,,,2,xtb relaxation completed with issues
+2025-09-13T22:48:46.132482,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.90,256.9,True,,,4,Successful dftb relaxation
+2025-09-13T22:49:00.757098,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.81,255.8,True,,,4,Successful dftb relaxation
+2025-09-13T22:49:43.313000,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.97,256.9,True,,,4,Successful dftb relaxation
+2025-09-13T22:49:45.120798,tmp_CH3CH2_dftb,7,17,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.84,256.2,True,,,4,Successful dftb relaxation
+2025-09-13T22:49:47.010354,tmp_CH3CH2CH2_dftb,10,25,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.93,256.5,True,,,4,Successful dftb relaxation
+2025-09-13T23:47:05.785577,tmp_C2H4_dftb,6,16,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.96,257.2,True,,,4,Successful dftb relaxation
+2025-09-13T23:47:07.878925,tmp_CH3CH2_dftb,7,17,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.87,256.0,True,,,4,Successful dftb relaxation
+2025-09-13T23:47:09.748542,tmp_CH3CH2CH2_dftb,10,25,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,0.92,257.0,True,,,4,Successful dftb relaxation
+2025-09-17T23:42:14.435949,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.03,104.0,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:43:38.919774,2025-08-23_h2o,3,10,relax-dftb,{'backend': 'dftb'},macOS Apple M1,4,1.72,268.7,True,,,4,Successful dftb relaxation
+2025-09-17T23:43:44.266961,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.04,103.6,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:52:29.082935,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.07,108.0,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:52:43.404437,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.07,108.6,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:53:45.885290,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.04,109.1,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:55:50.685092,2025-08-23_h2o,3,10,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.06,108.0,True,,,4,Successful dftb hessian calculation
+2025-09-17T23:57:39.829390,2025-08-23_h2o,3,10,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.00,103.5,True,,,4,Successful xtb hessian calculation
+2025-09-17T23:58:51.498832,h2o_relaxed,3,10,xtb-hessian-fixed,"{'method': 'GFN2-xTB', 'backend': 'fixed', 'calculation_type': 'hessian'}",macOS Apple M1,1,1.25,104.6,True,,,4,Successful Hessian calculation
+2025-09-17T23:58:51.499348,2025-08-23_h2o,3,10,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,1.26,104.6,True,,,4,Successful xtb hessian calculation
+2025-09-18T00:00:23.710714,h2o_relaxed,3,10,xtb-hessian-fixed,"{'method': 'GFN2-xTB', 'backend': 'fixed', 'calculation_type': 'hessian'}",macOS Apple M1,1,0.03,108.3,True,,,4,Successful Hessian calculation
+2025-09-18T00:00:23.711133,2025-08-23_h2o,3,10,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.04,108.3,True,,,4,Successful xtb hessian calculation
+2025-09-18T00:00:54.552185,h2o_relaxed,3,10,xtb-hessian-fixed,"{'method': 'GFN2-xTB', 'backend': 'fixed', 'calculation_type': 'hessian'}",macOS Apple M1,1,0.03,109.0,True,,,4,Successful Hessian calculation
+2025-09-18T00:00:54.552677,2025-08-23_h2o,3,10,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.03,109.0,True,,,4,Successful xtb hessian calculation
+2025-09-18T00:01:12.653365,h2o_relaxed,3,10,xtb-hessian-fixed,"{'method': 'GFN2-xTB', 'backend': 'fixed', 'calculation_type': 'hessian'}",macOS Apple M1,1,0.02,108.2,True,,,4,Successful Hessian calculation
+2025-09-18T00:01:12.653644,2025-08-23_h2o,3,10,hessian-xtb,"{'backend': 'xtb', 'calculation_type': 'hessian', 'xtb_method': 'GFN2-xTB', 'xtb_backend': 'fixed'}",macOS Apple M1,4,0.03,108.2,True,,,4,Successful xtb hessian calculation
+2025-09-18T00:20:43.553469,2025-08-23_h2o,,,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.01,108.1,False,,,1,dftb hessian calculation failed: Project folder data/2025-08-23_h2o does not exist
+2025-09-18T00:21:07.839720,test_thermo_h2o,,,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.30,104.5,True,,,4,Successful dftb hessian calculation
+2025-09-18T00:21:46.993904,test_thermo_h2o,,,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.09,108.8,True,,,4,Successful dftb hessian calculation
+2025-09-18T00:22:13.493631,test_thermo_h2o,,,hessian-dftb,"{'backend': 'dftb', 'calculation_type': 'hessian'}",macOS Apple M1,4,0.09,108.7,True,,,4,Successful dftb hessian calculation

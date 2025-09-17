@@ -1,0 +1,35 @@
+calculation:
+  backend: dftb
+  method: relax
+description: physisorption
+frame: 1
+n_atoms: 168
+pieces:
+  si_surface:
+    position:
+    - 0
+    - 0
+    - 0
+    rotation:
+    - 0
+    - 0
+    - 0
+  stm_tip:
+    position:
+    - 15.0
+    - 15.0
+    - 20.0
+    rotation:
+    - 180
+    - 0
+    - 0
+  time_ge:
+    position:
+    - 15
+    - 15
+    - 12.0
+    rotation:
+    - 0
+    - 0
+    - 0
+warnings: []

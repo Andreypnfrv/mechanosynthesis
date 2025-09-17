@@ -1,0 +1,21 @@
+{
+  "nx": 4,
+  "ny": 4,
+  "layers": 3,
+  "passivated": true,
+  "n_atoms": 123,
+  "active_sites": [
+    5,
+    11,
+    17,
+    23,
+    53,
+    59,
+    65,
+    71
+  ],
+  "composition": {
+    "H": 27,
+    "Si": 96
+  }
+}

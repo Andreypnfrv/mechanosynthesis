@@ -1,0 +1,46 @@
+source: "NHTBH38"
+reference_method: "CCSD(T)/aug-cc-pVTZ"
+accuracy: "±0.5 kcal/mol"
+elements_covered: ["C", "H", "O", "N"]
+relevance_mechanosynthesis: "HIGH"
+reactions_count: 38
+description: "Non-hydrogen transfer barrier heights - includes C-C bond formation, nucleophilic substitution, and association reactions"
+
+# Source references
+references:
+  primary_paper: 
+    title: "Benchmark Database of Barrier Heights for Heavy Atom Transfer, Nucleophilic Substitution, Association, and Unimolecular Reactions and Its Use to Test Theoretical Methods"
+    authors: "Zhao, Y.; González-García, N.; Truhlar, D. G."
+    journal: "J. Phys. Chem. A"
+    year: 2005
+    volume: 109
+    pages: "2012-2018"
+    doi: "10.1021/jp045141s"
+    url: "https://pubs.acs.org/doi/10.1021/jp045141s"
+  
+  data_source:
+    url: "https://comp.chem.umn.edu/database/"
+    description: "Minnesota Database Collection - Truhlar Group"
+    
+  related_benchmarks:
+    - "HTBH38"
+    - "GMTKN55 subset NHTBH38"
+
+# Reaction types relevant to mechanosynthesis
+reaction_types:
+  - heavy_atom_transfer: "C-C, C-O, C-N bond formation"
+  - nucleophilic_substitution: "SN2 reactions at carbon centers"  
+  - association: "Radical-radical coupling"
+  - unimolecular: "Cyclization, rearrangement"
+
+# Computational details
+computational_setup:
+  geometries: "B3LYP/6-31G(d) optimized"
+  single_points: "CCSD(T)/aug-cc-pVTZ"
+  basis_set_effects: "Minimal - high-level reference"
+  
+# Quality metrics
+quality:
+  experimental_comparison: "Limited experimental data available"
+  theoretical_consensus: "Good agreement among high-level methods"
+  uncertainty: "0.3-0.8 kcal/mol depending on reaction type"

@@ -1,0 +1,266 @@
+data:
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.536'
+  Adsorption energy with LDA [eV]: '0.369'
+  Adsorption energy with PBE [eV]: '0.506'
+  Adsorption energy with RPBE [eV]: '0.569'
+  Adsorption energy with mBEEF [eV]: '0.376'
+  Adsorption energy with mBEEF-vdW [eV]: '0.416'
+  Adsorption energy with vdW-DF2 [eV]: '0.367'
+  RPA_EXX_adsorp: ''
+  Surface Material: Sc
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.577'
+  Adsorption energy with LDA [eV]: '0.357'
+  Adsorption energy with PBE [eV]: '0.545'
+  Adsorption energy with RPBE [eV]: '0.632'
+  Adsorption energy with mBEEF [eV]: '0.471'
+  Adsorption energy with mBEEF-vdW [eV]: '0.423'
+  Adsorption energy with vdW-DF2 [eV]: '0.518'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ti
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.671'
+  Adsorption energy with LDA [eV]: '0.357'
+  Adsorption energy with PBE [eV]: '0.602'
+  Adsorption energy with RPBE [eV]: '0.716'
+  Adsorption energy with mBEEF [eV]: '0.579'
+  Adsorption energy with mBEEF-vdW [eV]: '0.455'
+  Adsorption energy with vdW-DF2 [eV]: '0.617'
+  RPA_EXX_adsorp: ''
+  Surface Material: V
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.690'
+  Adsorption energy with LDA [eV]: '0.281'
+  Adsorption energy with PBE [eV]: '0.568'
+  Adsorption energy with RPBE [eV]: '0.698'
+  Adsorption energy with mBEEF [eV]: '0.563'
+  Adsorption energy with mBEEF-vdW [eV]: '0.439'
+  Adsorption energy with vdW-DF2 [eV]: '0.668'
+  RPA_EXX_adsorp: ''
+  Surface Material: Cr
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.559'
+  Adsorption energy with LDA [eV]: '0.091'
+  Adsorption energy with PBE [eV]: '0.412'
+  Adsorption energy with RPBE [eV]: '0.554'
+  Adsorption energy with mBEEF [eV]: '0.442'
+  Adsorption energy with mBEEF-vdW [eV]: '0.303'
+  Adsorption energy with vdW-DF2 [eV]: '0.578'
+  RPA_EXX_adsorp: ''
+  Surface Material: Mn
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.537'
+  Adsorption energy with LDA [eV]: '0.068'
+  Adsorption energy with PBE [eV]: '0.373'
+  Adsorption energy with RPBE [eV]: '0.521'
+  Adsorption energy with mBEEF [eV]: '0.465'
+  Adsorption energy with mBEEF-vdW [eV]: '0.381'
+  Adsorption energy with vdW-DF2 [eV]: '0.411'
+  RPA_EXX_adsorp: ''
+  Surface Material: Fe
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.532'
+  Adsorption energy with LDA [eV]: '-0.033'
+  Adsorption energy with PBE [eV]: '0.347'
+  Adsorption energy with RPBE [eV]: '0.510'
+  Adsorption energy with mBEEF [eV]: '0.366'
+  Adsorption energy with mBEEF-vdW [eV]: '0.216'
+  Adsorption energy with vdW-DF2 [eV]: '0.491'
+  RPA_EXX_adsorp: ''
+  Surface Material: Co
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.383'
+  Adsorption energy with LDA [eV]: '-0.166'
+  Adsorption energy with PBE [eV]: '0.200'
+  Adsorption energy with RPBE [eV]: '0.360'
+  Adsorption energy with mBEEF [eV]: '0.464'
+  Adsorption energy with mBEEF-vdW [eV]: '0.433'
+  Adsorption energy with vdW-DF2 [eV]: '0.365'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ni
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.999'
+  Adsorption energy with LDA [eV]: '0.421'
+  Adsorption energy with PBE [eV]: '0.769'
+  Adsorption energy with RPBE [eV]: '0.925'
+  Adsorption energy with mBEEF [eV]: '0.833'
+  Adsorption energy with mBEEF-vdW [eV]: '0.722'
+  Adsorption energy with vdW-DF2 [eV]: '1.000'
+  RPA_EXX_adsorp: ''
+  Surface Material: Cu
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.533'
+  Adsorption energy with LDA [eV]: '0.393'
+  Adsorption energy with PBE [eV]: '0.504'
+  Adsorption energy with RPBE [eV]: '0.547'
+  Adsorption energy with mBEEF [eV]: '0.327'
+  Adsorption energy with mBEEF-vdW [eV]: '0.382'
+  Adsorption energy with vdW-DF2 [eV]: '0.365'
+  RPA_EXX_adsorp: ''
+  Surface Material: Y
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.578'
+  Adsorption energy with LDA [eV]: '0.388'
+  Adsorption energy with PBE [eV]: '0.558'
+  Adsorption energy with RPBE [eV]: '0.634'
+  Adsorption energy with mBEEF [eV]: '0.461'
+  Adsorption energy with mBEEF-vdW [eV]: '0.464'
+  Adsorption energy with vdW-DF2 [eV]: '0.503'
+  RPA_EXX_adsorp: ''
+  Surface Material: Zr
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.558'
+  Adsorption energy with LDA [eV]: '0.269'
+  Adsorption energy with PBE [eV]: '0.497'
+  Adsorption energy with RPBE [eV]: '0.598'
+  Adsorption energy with mBEEF [eV]: '0.442'
+  Adsorption energy with mBEEF-vdW [eV]: '0.403'
+  Adsorption energy with vdW-DF2 [eV]: '0.507'
+  RPA_EXX_adsorp: ''
+  Surface Material: Nb
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.576'
+  Adsorption energy with LDA [eV]: '0.189'
+  Adsorption energy with PBE [eV]: '0.455'
+  Adsorption energy with RPBE [eV]: '0.571'
+  Adsorption energy with mBEEF [eV]: '0.437'
+  Adsorption energy with mBEEF-vdW [eV]: '0.363'
+  Adsorption energy with vdW-DF2 [eV]: '0.541'
+  RPA_EXX_adsorp: ''
+  Surface Material: Mo
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.379'
+  Adsorption energy with LDA [eV]: '-0.144'
+  Adsorption energy with PBE [eV]: '0.197'
+  Adsorption energy with RPBE [eV]: '0.344'
+  Adsorption energy with mBEEF [eV]: '0.299'
+  Adsorption energy with mBEEF-vdW [eV]: '0.197'
+  Adsorption energy with vdW-DF2 [eV]: '0.412'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ru
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.122'
+  Adsorption energy with LDA [eV]: '-0.446'
+  Adsorption energy with PBE [eV]: '-0.077'
+  Adsorption energy with RPBE [eV]: '0.077'
+  Adsorption energy with mBEEF [eV]: '-0.078'
+  Adsorption energy with mBEEF-vdW [eV]: '-0.179'
+  Adsorption energy with vdW-DF2 [eV]: '0.184'
+  RPA_EXX_adsorp: ''
+  Surface Material: Rh
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.229'
+  Adsorption energy with LDA [eV]: '-0.444'
+  Adsorption energy with PBE [eV]: '-0.044'
+  Adsorption energy with RPBE [eV]: '0.125'
+  Adsorption energy with mBEEF [eV]: '-0.063'
+  Adsorption energy with mBEEF-vdW [eV]: '-0.171'
+  Adsorption energy with vdW-DF2 [eV]: '0.226'
+  RPA_EXX_adsorp: ''
+  Surface Material: Pd
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '1.277'
+  Adsorption energy with LDA [eV]: '0.679'
+  Adsorption energy with PBE [eV]: '1.044'
+  Adsorption energy with RPBE [eV]: '1.199'
+  Adsorption energy with mBEEF [eV]: '1.122'
+  Adsorption energy with mBEEF-vdW [eV]: '1.032'
+  Adsorption energy with vdW-DF2 [eV]: '1.249'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ag
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.527'
+  Adsorption energy with LDA [eV]: '0.339'
+  Adsorption energy with PBE [eV]: '0.514'
+  Adsorption energy with RPBE [eV]: '0.591'
+  Adsorption energy with mBEEF [eV]: '0.415'
+  Adsorption energy with mBEEF-vdW [eV]: '0.414'
+  Adsorption energy with vdW-DF2 [eV]: '0.478'
+  RPA_EXX_adsorp: ''
+  Surface Material: Hf
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.632'
+  Adsorption energy with LDA [eV]: '0.332'
+  Adsorption energy with PBE [eV]: '0.573'
+  Adsorption energy with RPBE [eV]: '0.678'
+  Adsorption energy with mBEEF [eV]: '0.531'
+  Adsorption energy with mBEEF-vdW [eV]: '0.480'
+  Adsorption energy with vdW-DF2 [eV]: '0.573'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ta
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.529'
+  Adsorption energy with LDA [eV]: '0.130'
+  Adsorption energy with PBE [eV]: '0.394'
+  Adsorption energy with RPBE [eV]: '0.508'
+  Adsorption energy with mBEEF [eV]: '0.334'
+  Adsorption energy with mBEEF-vdW [eV]: '0.256'
+  Adsorption energy with vdW-DF2 [eV]: '0.493'
+  RPA_EXX_adsorp: ''
+  Surface Material: W
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.311'
+  Adsorption energy with LDA [eV]: '-0.094'
+  Adsorption energy with PBE [eV]: '0.200'
+  Adsorption energy with RPBE [eV]: '0.326'
+  Adsorption energy with mBEEF [eV]: '0.181'
+  Adsorption energy with mBEEF-vdW [eV]: '0.090'
+  Adsorption energy with vdW-DF2 [eV]: '0.367'
+  RPA_EXX_adsorp: ''
+  Surface Material: Re
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.093'
+  Adsorption energy with LDA [eV]: '-0.413'
+  Adsorption energy with PBE [eV]: '-0.100'
+  Adsorption energy with RPBE [eV]: '0.032'
+  Adsorption energy with mBEEF [eV]: '-0.141'
+  Adsorption energy with mBEEF-vdW [eV]: '-0.234'
+  Adsorption energy with vdW-DF2 [eV]: '0.161'
+  RPA_EXX_adsorp: ''
+  Surface Material: Os
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '-0.237'
+  Adsorption energy with LDA [eV]: '-0.809'
+  Adsorption energy with PBE [eV]: '-0.464'
+  Adsorption energy with RPBE [eV]: '-0.321'
+  Adsorption energy with mBEEF [eV]: '-0.547'
+  Adsorption energy with mBEEF-vdW [eV]: '-0.644'
+  Adsorption energy with vdW-DF2 [eV]: '-0.162'
+  RPA_EXX_adsorp: ''
+  Surface Material: Ir
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '-0.189'
+  Adsorption energy with LDA [eV]: '-0.841'
+  Adsorption energy with PBE [eV]: '-0.461'
+  Adsorption energy with RPBE [eV]: '-0.305'
+  Adsorption energy with mBEEF [eV]: '-0.586'
+  Adsorption energy with mBEEF-vdW [eV]: '-0.686'
+  Adsorption energy with vdW-DF2 [eV]: '-0.126'
+  RPA_EXX_adsorp: ''
+  Surface Material: Pt
+- Adsorbate: H
+  Adsorption energy with BEEF-vdW [eV]: '0.856'
+  Adsorption energy with LDA [eV]: '0.206'
+  Adsorption energy with PBE [eV]: '0.597'
+  Adsorption energy with RPBE [eV]: '0.757'
+  Adsorption energy with mBEEF [eV]: '0.555'
+  Adsorption energy with mBEEF-vdW [eV]: '0.448'
+  Adsorption energy with vdW-DF2 [eV]: '0.882'
+  RPA_EXX_adsorp: ''
+  Surface Material: Au
+data_points: 25
+dataset: cmr_adsorption
+description: Adsorption energies on transition metal surfaces
+mechanosynthesis_metals:
+- Au
+- W
+- Cu
+- Pt
+- Ag
+- Fe
+- Ni
+metals:
+- H
+source: DTU Computational Materials Repository
+url: https://cmrdb.fysik.dtu.dk/adsorption/

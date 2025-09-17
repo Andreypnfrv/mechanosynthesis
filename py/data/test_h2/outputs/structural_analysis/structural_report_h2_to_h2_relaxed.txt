@@ -1,0 +1,20 @@
+STRUCTURAL ANALYSIS REPORT
+==================================================
+Initial structure: h2
+Final structure: h2_relaxed
+RMSD: 0.025 Å
+
+BOND ANALYSIS
+--------------------
+
+H-H bonds:
+  Count: 1 → 1 (+0)
+  Avg length: 0.700 → 0.749 Å (+0.049 Å)
+
+
+ANGLE ANALYSIS
+--------------------
+
+
+COORDINATION ANALYSIS
+--------------------

@@ -1,0 +1,55 @@
+# Cloud Build configuration for DFT containers
+steps:
+  # Build DFTB+ container
+  - name: 'gcr.io/cloud-builders/docker'
+    dir: 'containers/dftb'
+    args: [
+      'build',
+      '-t', 'gcr.io/$PROJECT_ID/dft-runners/dftb:latest',
+      '-t', 'gcr.io/$PROJECT_ID/dft-runners/dftb:$BUILD_ID',
+      '.'
+    ]
+  
+  # Build Orca container  
+  - name: 'gcr.io/cloud-builders/docker'
+    dir: 'containers/orca'
+    args: [
+      'build', 
+      '-t', 'gcr.io/$PROJECT_ID/dft-runners/orca:latest',
+      '-t', 'gcr.io/$PROJECT_ID/dft-runners/orca:$BUILD_ID',
+      '.'
+    ]
+  
+  # Push DFTB+ container
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/dft-runners/dftb:latest']
+  
+  - name: 'gcr.io/cloud-builders/docker'  
+    args: ['push', 'gcr.io/$PROJECT_ID/dft-runners/dftb:$BUILD_ID']
+  
+  # Push Orca container
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/dft-runners/orca:latest']
+    
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/dft-runners/orca:$BUILD_ID']
+
+# Build configuration
+options:
+  machineType: 'E2_HIGHCPU_32'  # Fast build machine
+  diskSizeGb: 100
+  
+# Timeout
+timeout: '3600s'  # 1 hour timeout
+
+# Substitutions for build variables
+substitutions:
+  _DFTB_VERSION: 'latest'
+  _ORCA_VERSION: 'latest'
+
+# Images to be pushed to registry  
+images:
+  - 'gcr.io/$PROJECT_ID/dft-runners/dftb:latest'
+  - 'gcr.io/$PROJECT_ID/dft-runners/dftb:$BUILD_ID'
+  - 'gcr.io/$PROJECT_ID/dft-runners/orca:latest'
+  - 'gcr.io/$PROJECT_ID/dft-runners/orca:$BUILD_ID'

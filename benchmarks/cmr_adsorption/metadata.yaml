@@ -1,0 +1,59 @@
+name: "CMR Adsorption Database"
+source: "DTU Computational Materials Repository"
+url: "https://cmrdb.fysik.dtu.dk/adsorption/"
+description: "Adsorption energies on transition metal surfaces"
+
+metals_available:
+  - Au  # Gold - HIGH PRIORITY for mechanosynthesis
+  - W   # Tungsten - HIGH PRIORITY for STM tips  
+  - Cu  # Copper
+  - Ag  # Silver
+  - Pt  # Platinum
+  - Pd  # Palladium
+  - Ir  # Iridium
+  - Os  # Osmium
+  - Re  # Rhenium
+  - Ta  # Tantalum
+  - Hf  # Hafnium
+  - Mo  # Molybdenum
+  - Nb  # Niobium
+  - Zr  # Zirconium
+  - Y   # Yttrium
+  - Sc  # Scandium
+  - Ti  # Titanium
+  - V   # Vanadium
+  - Cr  # Chromium
+  - Mn  # Manganese
+  - Fe  # Iron
+  - Co  # Cobalt
+  - Ni  # Nickel
+  - Ru  # Ruthenium
+  - Rh  # Rhodium
+
+adsorbates:
+  - H    # Hydrogen (confirmed available)
+  - OH   # Hydroxyl
+  - CH   # Methylidyne
+  - NO   # Nitric oxide
+  - CO   # Carbon monoxide
+  - N2   # Nitrogen
+  - N    # Atomic nitrogen
+  - O    # Atomic oxygen
+
+dft_functionals:
+  - LDA
+  - PBE
+  - RPBE
+  - BEEF-vdW
+
+mechanosynthesis_relevance:
+  Au: "HIGH - electrode materials, platforms"
+  W: "HIGH - STM tips, tools" 
+  Cu: "MEDIUM - electrodes"
+  Pt: "MEDIUM - alternative STM tips"
+  
+format: "ASE Database format"
+license: "Creative Commons Attribution-NonCommercial 4.0 International"
+
+access_method: "Web scraping or direct contact with CMR"
+status: "Available but needs custom extraction"

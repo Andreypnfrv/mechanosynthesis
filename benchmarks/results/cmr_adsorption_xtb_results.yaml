@@ -1,0 +1,53 @@
+backend: xtb
+dataset: cmr_adsorption
+results:
+  H_Ag:
+    adsorbate: H
+    calculated: 0.18409999999999999
+    error_lda: 0.49490000000000006
+    error_pbe: 0.8599000000000001
+    metal: Ag
+    reference_lda: 0.679
+    reference_pbe: 1.044
+    relevance: MEDIUM
+    system: H on Ag
+  H_Au:
+    adsorbate: H
+    calculated: 0.14079999999999998
+    error_lda: 0.06520000000000001
+    error_pbe: 0.4562
+    metal: Au
+    reference_lda: 0.206
+    reference_pbe: 0.597
+    relevance: HIGH
+    system: H on Au
+  H_Cu:
+    adsorbate: H
+    calculated: 0.29669999999999996
+    error_lda: 0.12430000000000002
+    error_pbe: 0.47230000000000005
+    metal: Cu
+    reference_lda: 0.421
+    reference_pbe: 0.769
+    relevance: MEDIUM
+    system: H on Cu
+  H_Pt:
+    adsorbate: H
+    calculated: 0.2169
+    error_lda: 1.0579
+    error_pbe: 0.6779000000000001
+    metal: Pt
+    reference_lda: -0.841
+    reference_pbe: -0.461
+    relevance: MEDIUM
+    system: H on Pt
+  H_W:
+    adsorbate: H
+    calculated: 0.31889999999999996
+    error_lda: 0.18889999999999996
+    error_pbe: 0.07510000000000006
+    metal: W
+    reference_lda: 0.13
+    reference_pbe: 0.394
+    relevance: HIGH
+    system: H on W

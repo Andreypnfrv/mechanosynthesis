@@ -1,0 +1,48 @@
+backend: xtb
+dataset: nhtbh38
+results:
+  CH3_C2H4_CH3CH2CH2:
+    calculated_forward: 10.501
+    calculated_reverse: 36.621
+    error_forward: 3.651
+    error_reverse: 3.6510000000000034
+    reaction: "CH3 + C2H4 \u2192 CH3CH2CH2"
+    reference_forward: 6.85
+    reference_reverse: 32.97
+    relevance: HIGH
+  F_CH3F_FCH3_F:
+    calculated_forward: 3.371
+    calculated_reverse: 3.371
+    error_forward: 3.711
+    error_reverse: 3.711
+    reaction: "F- + CH3F \u2192 FCH3 + F-"
+    reference_forward: -0.34
+    reference_reverse: -0.34
+    relevance: MEDIUM
+  H_C2H4_CH3CH2:
+    calculated_forward: 5.313
+    calculated_reverse: 45.343
+    error_forward: 3.593
+    error_reverse: 3.5930000000000035
+    reaction: "H + C2H4 \u2192 CH3CH2"
+    reference_forward: 1.72
+    reference_reverse: 41.75
+    relevance: HIGH
+  H_CO_HCO:
+    calculated_forward: 6.899
+    calculated_reverse: 26.409
+    error_forward: 3.729
+    error_reverse: 3.728999999999999
+    reaction: "H + CO \u2192 HCO"
+    reference_forward: 3.17
+    reference_reverse: 22.68
+    relevance: MEDIUM
+  H_FCH3_HF_CH3:
+    calculated_forward: 34.16199999999999
+    calculated_reverse: 60.80200000000001
+    error_forward: 3.781999999999993
+    error_reverse: 3.7820000000000036
+    reaction: "H + FCH3 \u2192 HF + CH3"
+    reference_forward: 30.38
+    reference_reverse: 57.02
+    relevance: HIGH

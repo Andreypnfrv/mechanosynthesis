@@ -1,0 +1,35 @@
+calculation:
+  backend: dftb
+  method: single_point
+description: initial_approach
+frame: 0
+n_atoms: 168
+pieces:
+  si_surface:
+    position:
+    - 0
+    - 0
+    - 0
+    rotation:
+    - 0
+    - 0
+    - 0
+  stm_tip:
+    position:
+    - 0
+    - 0
+    - 25.0
+    rotation:
+    - 180
+    - 0
+    - 0
+  time_ge:
+    position:
+    - 0
+    - 0
+    - 15.0
+    rotation:
+    - 63
+    - 0
+    - 0
+warnings: []

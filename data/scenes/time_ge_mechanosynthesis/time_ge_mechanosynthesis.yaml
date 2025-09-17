@@ -1,0 +1,72 @@
+name: "time_ge_mechanosynthesis"
+description: "STM-mediated TIMe-Ge deposition and radical activation on Si(100)"
+
+pieces:
+  si_surface:
+    source: "data/si_surface_4x4x3_stable/outputs/ptbp_dftb/si_surface_relaxed.xyz"
+    constraints:
+      - type: "fixed_atoms"
+        selection: "bottom_two_layers"
+
+  time_ge:
+    source: "data/ge_ch2i4/outputs/orca_native/ge_ch2i4_relaxed.xyz"
+
+  stm_tip:
+    source: "data/w_stm_tip_3_3/outputs/ptbp_dftb/w_stm_tip_3_3_relaxed.xyz"
+
+animation:
+  keyframes:
+    - frame: 0
+      description: "initial_approach"
+      pieces:
+        si_surface:
+          position: [0, 0, 0]
+          rotation: [0, 0, 0]
+        time_ge:
+          position: [0, 0, 15.0]
+          rotation: [63, 0, 0]
+        stm_tip:
+          position: [0, 0, 25.0]
+          rotation: [180, 0, 0]
+      calculation:
+        method: "single_point"
+        backend: "dftb"
+
+    - frame: 1
+      description: "physisorption"
+      pieces:
+        si_surface:
+          position: [0, 0, 0]
+          rotation: [0, 0, 0]
+        time_ge:
+          position: [15, 15, 12.0]
+          rotation: [0, 0, 0]
+        stm_tip:
+          position: [15.0, 15.0, 20.0]
+          rotation: [180, 0, 0]
+      calculation:
+        method: "relax"
+        backend: "dftb"
+
+    - frame: 2
+      description: "chemisorption"
+      pieces:
+        si_surface:
+          position: [0, 0, 0]
+          rotation: [0, 0, 0]
+        time_ge:
+          position: [15, 15, 9.5]
+          rotation: [0, 0, 0]
+        stm_tip:
+          position: [15.0, 15.0, 16.0]
+          rotation: [180, 0, 0]
+      calculation:
+        method: "relax"
+        backend: "dftb"
+
+extract:
+  artifacts:
+    - method: "bond_analysis"
+      target_bonds: ["C-I", "Ge-Si", "C-Si"]
+    - method: "radical_detection"
+      spin_threshold: 0.5

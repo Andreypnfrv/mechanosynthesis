@@ -1,0 +1,277 @@
+{
+  "initial": {
+    "bonds": {
+      "bonds": [
+        {
+          "atoms": [
+            0,
+            1
+          ],
+          "symbols": [
+            "O",
+            "H"
+          ],
+          "type": "H-O",
+          "length": 0.9573113391159639,
+          "vector": [
+            0.757,
+            0.586,
+            0.0
+          ]
+        },
+        {
+          "atoms": [
+            0,
+            2
+          ],
+          "symbols": [
+            "O",
+            "H"
+          ],
+          "type": "H-O",
+          "length": 0.9573113391159639,
+          "vector": [
+            -0.757,
+            0.586,
+            0.0
+          ]
+        }
+      ],
+      "bond_types": {
+        "H-O": [
+          0.9573113391159639,
+          0.9573113391159639
+        ]
+      },
+      "total_bonds": 2
+    },
+    "angles": {
+      "angles": [
+        {
+          "atoms": [
+            1,
+            0,
+            2
+          ],
+          "symbols": [
+            "H",
+            "O",
+            "H"
+          ],
+          "type": "H-O-H",
+          "angle": 104.51249572721817
+        }
+      ],
+      "angle_types": {
+        "H-O-H": [
+          104.51249572721817
+        ]
+      },
+      "total_angles": 1
+    },
+    "coordination": {
+      "atom_coordination": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      },
+      "element_coordination": {
+        "O": [
+          2
+        ],
+        "H": [
+          1,
+          1
+        ]
+      },
+      "coordination_stats": {
+        "O": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2,
+          "distribution": {
+            "2": 1
+          }
+        },
+        "H": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1,
+          "distribution": {
+            "1": 2
+          }
+        }
+      }
+    }
+  },
+  "final": {
+    "bonds": {
+      "bonds": [
+        {
+          "atoms": [
+            0,
+            1
+          ],
+          "symbols": [
+            "O",
+            "H"
+          ],
+          "type": "H-O",
+          "length": 0.9831187973425511,
+          "vector": [
+            0.7652418,
+            0.61719329,
+            -0.0
+          ]
+        },
+        {
+          "atoms": [
+            0,
+            2
+          ],
+          "symbols": [
+            "O",
+            "H"
+          ],
+          "type": "H-O",
+          "length": 0.9831187973425511,
+          "vector": [
+            -0.7652418,
+            0.61719329,
+            0.0
+          ]
+        }
+      ],
+      "bond_types": {
+        "H-O": [
+          0.9831187973425511,
+          0.9831187973425511
+        ]
+      },
+      "total_bonds": 2
+    },
+    "angles": {
+      "angles": [
+        {
+          "atoms": [
+            1,
+            0,
+            2
+          ],
+          "symbols": [
+            "H",
+            "O",
+            "H"
+          ],
+          "type": "H-O-H",
+          "angle": 102.22530865612161
+        }
+      ],
+      "angle_types": {
+        "H-O-H": [
+          102.22530865612161
+        ]
+      },
+      "total_angles": 1
+    },
+    "coordination": {
+      "atom_coordination": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      },
+      "element_coordination": {
+        "O": [
+          2
+        ],
+        "H": [
+          1,
+          1
+        ]
+      },
+      "coordination_stats": {
+        "O": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2,
+          "max": 2,
+          "distribution": {
+            "2": 1
+          }
+        },
+        "H": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1,
+          "max": 1,
+          "distribution": {
+            "1": 2
+          }
+        }
+      }
+    }
+  },
+  "changes": {
+    "bonds": {
+      "H-O": {
+        "initial_count": 2,
+        "final_count": 2,
+        "count_change": 0,
+        "initial_avg_length": 0.9573113391159639,
+        "final_avg_length": 0.9831187973425511,
+        "avg_length_change": 0.025807458226587254,
+        "initial_lengths": [
+          0.9573113391159639,
+          0.9573113391159639
+        ],
+        "final_lengths": [
+          0.9831187973425511,
+          0.9831187973425511
+        ]
+      }
+    },
+    "angles": {
+      "H-O-H": {
+        "initial_count": 1,
+        "final_count": 1,
+        "count_change": 0,
+        "initial_avg_angle": 104.51249572721817,
+        "final_avg_angle": 102.22530865612161,
+        "avg_angle_change": -2.287187071096554,
+        "initial_angles": [
+          104.51249572721817
+        ],
+        "final_angles": [
+          102.22530865612161
+        ]
+      }
+    },
+    "coordination": {
+      "H": {
+        "initial_avg_coordination": 1.0,
+        "final_avg_coordination": 1.0,
+        "coordination_change": 0.0,
+        "initial_distribution": {
+          "1": 2
+        },
+        "final_distribution": {
+          "1": 2
+        }
+      },
+      "O": {
+        "initial_avg_coordination": 2.0,
+        "final_avg_coordination": 2.0,
+        "coordination_change": 0.0,
+        "initial_distribution": {
+          "2": 1
+        },
+        "final_distribution": {
+          "2": 1
+        }
+      }
+    },
+    "rmsd": 0.016171326769893937
+  }
+}
