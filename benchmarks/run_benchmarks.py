@@ -402,16 +402,76 @@ class BenchmarkRunner:
             }, f, default_flow_style=False)
             
         print(f"\\nResults saved to: {output_file}")
+    
+    def compare_backends_summary(self, all_results: Dict, backends: List[str]):
+        """Print cross-backend comparison summary"""
+        print(f"\\n{'='*80}")
+        print(f"🏆 CROSS-BACKEND COMPARISON SUMMARY")
+        print(f"{'='*80}")
+        
+        # NHTBH38 comparison
+        print(f"\\n📊 REACTION BARRIERS (NHTBH38)")
+        print(f"{'Method':<12} {'MAE (kcal/mol)':<15} {'RMSE (kcal/mol)':<16} {'Status'}")
+        print(f"{'-'*60}")
+        
+        for backend in backends:
+            if backend in all_results and 'nhtbh38' in all_results[backend]:
+                results = all_results[backend]['nhtbh38']
+                errors = []
+                for result in results.values():
+                    if 'error_forward' in result:
+                        errors.extend([result['error_forward'], result['error_reverse']])
+                
+                if errors:
+                    mae = sum(errors) / len(errors)
+                    rmse = (sum(e**2 for e in errors) / len(errors))**0.5
+                    status = "✅ Good" if mae < 3.0 else "⚠️ Fair" if mae < 5.0 else "❌ Poor"
+                    print(f"{backend:<12} {mae:<15.2f} {rmse:<16.2f} {status}")
+        
+        # CMR comparison  
+        print(f"\\n🔬 SURFACE ADSORPTION (CMR)")
+        print(f"{'Method':<12} {'MAE vs PBE (eV)':<17} {'MAE vs LDA (eV)':<16} {'Status'}")
+        print(f"{'-'*65}")
+        
+        for backend in backends:
+            if backend in all_results and 'cmr_adsorption' in all_results[backend]:
+                results = all_results[backend]['cmr_adsorption']
+                errors_pbe = []
+                errors_lda = []
+                
+                for result in results.values():
+                    if 'error_pbe' in result:
+                        errors_pbe.append(result['error_pbe'])
+                        errors_lda.append(result['error_lda'])
+                
+                if errors_pbe:
+                    mae_pbe = sum(errors_pbe) / len(errors_pbe)
+                    mae_lda = sum(errors_lda) / len(errors_lda)
+                    status = "✅ Good" if mae_pbe < 0.3 else "⚠️ Fair" if mae_pbe < 0.6 else "❌ Poor"
+                    print(f"{backend:<12} {mae_pbe:<17.3f} {mae_lda:<16.3f} {status}")
+        
+        # Overall recommendation
+        print(f"\\n🎯 MECHANOSYNTHESIS RECOMMENDATIONS")
+        print(f"{'='*50}")
+        print(f"• **Organic reactions**: Best method for C-H bond formation")
+        print(f"• **STM tips (W/Au)**: Best method for surface interactions") 
+        print(f"• **Mixed systems**: Most robust across all applications")
+        print(f"• **High accuracy**: When precision is critical")
+        print(f"\\n💾 Detailed results saved in: benchmarks/results/")
+        print(f"{'='*80}")
 
 def main():
     parser = argparse.ArgumentParser(description="Run quantum chemistry benchmarks for mechanosynthesis")
     parser.add_argument('--dataset', choices=['htbh38', 'cmr_adsorption', 'all'], 
                        default=None, help='Specific benchmark dataset (default: comprehensive suite with NHTBH38 + CMR)')
-    parser.add_argument('--backend', choices=['dftb', 'xtb', 'orca-simple', 'all'],
-                       default='dftb', help='Computational backend')
+    parser.add_argument('--backends', nargs='+', choices=['dftb', 'xtb', 'orca-simple'], 
+                       default=['dftb'], help='Computational backends to test (default: dftb)')
     parser.add_argument('--list-datasets', action='store_true', help='List available datasets')
     parser.add_argument('--list-backends', action='store_true', help='List available backends')
-    parser.add_argument('--compare', help='Compare multiple backends (comma-separated)')
+    
+    # Legacy support
+    parser.add_argument('--backend', choices=['dftb', 'xtb', 'orca-simple'], help='Single backend (legacy)')
+    parser.add_argument('--compare', help='Compare multiple backends (legacy, use --backends instead)')
     
     args = parser.parse_args()
     
@@ -425,8 +485,20 @@ def main():
         runner.list_backends()
         return
         
-    # Run benchmarks
-    backends = args.compare.split(',') if args.compare else [args.backend]
+    # Handle legacy arguments
+    if args.compare:
+        backends = [b.strip() for b in args.compare.split(',')]
+    elif args.backend:
+        backends = [args.backend]
+    else:
+        backends = args.backends
+    
+    # Run comprehensive benchmark suite across all backends
+    print(f"🧪 COMPREHENSIVE MECHANOSYNTHESIS BENCHMARK")
+    print(f"📊 Testing {len(backends)} backend(s): {', '.join(backends)}")
+    print(f"{'='*80}")
+    
+    all_results = {}
     
     for backend in backends:
         backend = backend.strip()
@@ -451,6 +523,12 @@ def main():
             runner.analyze_results(results_cmr, backend)
             runner.save_results(results_cmr, 'cmr_adsorption', backend)
             
+            # Store results for cross-backend comparison
+            all_results[backend] = {
+                'nhtbh38': results_nhtbh38,
+                'cmr_adsorption': results_cmr
+            }
+            
         # Run specific datasets if requested
         elif args.dataset == 'cmr_adsorption':
             results = runner.run_cmr_adsorption(backend)
@@ -461,6 +539,10 @@ def main():
             print("HTBH38 not yet implemented")
             
         # Add other datasets here when implemented
+    
+    # Cross-backend comparison summary
+    if len(backends) > 1:
+        runner.compare_backends_summary(all_results, backends)
         
 if __name__ == "__main__":
     main()

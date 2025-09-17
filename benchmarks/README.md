@@ -79,28 +79,27 @@ Our mechanosynthesis focus covers:
 
 ```bash
 # 🎯 COMPREHENSIVE BENCHMARK (RECOMMENDED)
-# Runs NHTBH38 + CMR + all future benchmarks
-python benchmarks/run_benchmarks.py --backend dftb
-python benchmarks/run_benchmarks.py --backend xtb
-python benchmarks/run_benchmarks.py --compare dftb,xtb
+# Test single method on all benchmarks
+python benchmarks/run_benchmarks.py --backends dftb
+python benchmarks/run_benchmarks.py --backends xtb
 
-# List available datasets
+# Compare multiple methods (1-N backends vs benchmarks)
+python benchmarks/run_benchmarks.py --backends dftb xtb
+python benchmarks/run_benchmarks.py --backends dftb xtb orca-simple
+
+# List available datasets/backends
 python benchmarks/run_benchmarks.py --list-datasets
-
-# Run specific datasets only
-python benchmarks/run_benchmarks.py --dataset cmr_adsorption --backend xtb
+python benchmarks/run_benchmarks.py --list-backends
 ```
 
 ### Advanced Usage
 ```bash
-# Compare all methods on comprehensive suite
-python benchmarks/run_benchmarks.py --compare dftb,xtb,orca-simple
+# Run specific dataset only
+python benchmarks/run_benchmarks.py --dataset cmr_adsorption --backends xtb
 
-# List available computational backends
-python benchmarks/run_benchmarks.py --list-backends
-
-# Legacy: explicit all datasets (same as default)
-python benchmarks/run_benchmarks.py --dataset all --backend dftb
+# Legacy support (still works)
+python benchmarks/run_benchmarks.py --compare dftb,xtb
+python benchmarks/run_benchmarks.py --backend dftb
 ```
 
 ## Results Storage
@@ -128,10 +127,10 @@ python benchmarks/run_benchmarks.py --dataset all --backend dftb
 ```bash
 # Complete method evaluation (one command!)
 cd mechanosynthesis/benchmarks
-PYTHONPATH=../py python run_benchmarks.py --backend dftb
+PYTHONPATH=../py python run_benchmarks.py --backends dftb
 
-# Compare DFTB+ vs xTB
-PYTHONPATH=../py python run_benchmarks.py --compare dftb,xtb
+# Compare DFTB+ vs xTB (with cross-backend summary!)
+PYTHONPATH=../py python run_benchmarks.py --backends dftb xtb
 ```
 
 This runs **comprehensive benchmark suite** covering:
