@@ -1,7 +1,6 @@
 # Requirements
 
 dftb+, orca, python venv
-TODO: yeah, maybe i should add some kind of installation script
 
 # How To Use
 
@@ -17,7 +16,6 @@ export PATH=/Users/andreypanferov/opt/dftb+/bin:$PATH
 ### Testing
 ```bash
 python py/main.py test          # Run all tests
-python py/main.py test unified  # Test unified backend
 ```
 
 ### Parts Pipeline (Individual Molecules)
@@ -61,18 +59,18 @@ python benchmarks/run_benchmarks.py --compare dftb,xtb
 - **Medium molecules (15-50 atoms)**: `--backend dftb` or `--hessian-orca-simple`
 - **Large molecules (>50 atoms)**: `--backend dftb` (fastest analytical methods)
 
+
 # Log
 
 #### 2025.09.17
-Have time to continue. To reproduce CBN's chain i need to add thermo.
-Also actually i want to deploy the repo
+Have time to continue. To reproduce CBN's chain I need to add thermo.
+Cleaned up the repo, added comprehensive Readme, Installation for xTB, DFTB+, ORCA.
 
 ### 2025.09.13
 Implemented:
 - Metrics for comparing structure before and after the relaxation
 - First time tried to assemble the scene
 - Benchmarks to compare different backends (taken from different libraries). Actually quite interesting, for mechanosynthesis it looks like that DFTB+ is more accurate then XTB
-
 
 ### 2025.09.12
 So, i want to compare how different backends work for the different atoms, that take part in mechanosynthesis. It's important for me to compare, performance, accuracy,stability. The atoms that we'll be definetly using for mechanosynthesis:
