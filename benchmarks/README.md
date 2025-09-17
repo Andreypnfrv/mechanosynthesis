@@ -78,27 +78,29 @@ Our mechanosynthesis focus covers:
 ### Basic Commands
 
 ```bash
+# 🎯 COMPREHENSIVE BENCHMARK (RECOMMENDED)
+# Runs NHTBH38 + CMR + all future benchmarks
+python benchmarks/run_benchmarks.py --backend dftb
+python benchmarks/run_benchmarks.py --backend xtb
+python benchmarks/run_benchmarks.py --compare dftb,xtb
+
 # List available datasets
 python benchmarks/run_benchmarks.py --list-datasets
 
-# Run organic reactions (NHTBH38)
-python benchmarks/run_benchmarks.py --dataset nhtbh38 --backend dftb
-
-# Run metal surface adsorption (CMR)
+# Run specific datasets only
 python benchmarks/run_benchmarks.py --dataset cmr_adsorption --backend xtb
-
-# Compare methods across datasets
-python benchmarks/run_benchmarks.py --dataset nhtbh38 --compare dftb,xtb
-python benchmarks/run_benchmarks.py --dataset cmr_adsorption --compare dftb,xtb
 ```
 
 ### Advanced Usage
 ```bash
-# Run all datasets with all methods
-python benchmarks/run_benchmarks.py --dataset all --compare dftb,xtb,orca-simple
+# Compare all methods on comprehensive suite
+python benchmarks/run_benchmarks.py --compare dftb,xtb,orca-simple
 
 # List available computational backends
 python benchmarks/run_benchmarks.py --list-backends
+
+# Legacy: explicit all datasets (same as default)
+python benchmarks/run_benchmarks.py --dataset all --backend dftb
 ```
 
 ## Results Storage
@@ -121,8 +123,25 @@ python benchmarks/run_benchmarks.py --list-backends
 - **CMR**: DTU Computational Materials Repository (https://cmrdb.fysik.dtu.dk/adsorption/)
 - All datasets include full attribution in respective metadata.yaml files
 
+## Quick Start
+
+```bash
+# Complete method evaluation (one command!)
+cd mechanosynthesis/benchmarks
+PYTHONPATH=../py python run_benchmarks.py --backend dftb
+
+# Compare DFTB+ vs xTB
+PYTHONPATH=../py python run_benchmarks.py --compare dftb,xtb
+```
+
+This runs **comprehensive benchmark suite** covering:
+- ✅ **Reaction barriers** (NHTBH38) - organic mechanosynthesis reactions  
+- ✅ **Surface chemistry** (CMR) - STM tips, platforms, electrodes
+- 🔄 **Future benchmarks** (BH76, SBH17) - added automatically
+
 ## Future Plans
-1. Add BEAST electrocatalyst database (NREL)
-2. Silicon surface reactions for diamond mechanosynthesis
-3. Transition state search integration
-4. Machine learning property predictions
+1. **BH76 dataset** - 76 reaction barriers (broader coverage)
+2. **SBH17 dataset** - surface reaction barriers (chemisorption)  
+3. **W4-11 thermochemistry** - high-accuracy reference
+4. **Transition state search** integration
+5. **Machine learning** property predictions

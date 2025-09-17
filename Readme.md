@@ -63,8 +63,10 @@ python benchmarks/run_benchmarks.py --compare dftb,xtb
 # Log
 
 #### 2025.09.17
-Have time to continue. To reproduce CBN's chain I need to add thermo.
-Cleaned up the repo, added comprehensive Readme, Installation for xTB, DFTB+, ORCA.
+Have time to continue. To reproduce CBN's chain I need to add thermo (so added this one, however no time to test yet, will test tomorrow)
+Cleaned up the repo, added comprehensive Readme.txt,
+Added installation for xTB, DFTB+, ORCA.
+Upgrading my benchmarks.
 
 ### 2025.09.13
 Implemented:

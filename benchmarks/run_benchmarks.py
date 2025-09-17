@@ -405,8 +405,8 @@ class BenchmarkRunner:
 
 def main():
     parser = argparse.ArgumentParser(description="Run quantum chemistry benchmarks for mechanosynthesis")
-    parser.add_argument('--dataset', choices=['nhtbh38', 'htbh38', 'cmr_adsorption', 'all'], 
-                       default='nhtbh38', help='Benchmark dataset to run')
+    parser.add_argument('--dataset', choices=['htbh38', 'cmr_adsorption', 'all'], 
+                       default=None, help='Specific benchmark dataset (default: comprehensive suite with NHTBH38 + CMR)')
     parser.add_argument('--backend', choices=['dftb', 'xtb', 'orca-simple', 'all'],
                        default='dftb', help='Computational backend')
     parser.add_argument('--list-datasets', action='store_true', help='List available datasets')
@@ -434,15 +434,31 @@ def main():
         print(f"RUNNING BENCHMARKS WITH {backend.upper()}")
         print(f"{'='*80}")
         
-        if args.dataset == 'nhtbh38' or args.dataset == 'all':
-            results = runner.run_nhtbh38_subset(backend)
-            runner.analyze_results(results, backend)
-            runner.save_results(results, 'nhtbh38', backend)
+        # Default: comprehensive benchmark suite
+        if args.dataset is None or args.dataset == 'all':
+            # Run all important benchmarks for comprehensive method evaluation
+            print(f"\n🧪 COMPREHENSIVE BENCHMARK SUITE")
             
-        if args.dataset == 'cmr_adsorption' or args.dataset == 'all':
+            # 1. Reaction barriers (NHTBH38) - core mechanosynthesis reactions
+            print(f"\n📊 Running reaction barrier benchmarks...")
+            results_nhtbh38 = runner.run_nhtbh38_subset(backend)
+            runner.analyze_results(results_nhtbh38, backend)
+            runner.save_results(results_nhtbh38, 'nhtbh38', backend)
+            
+            # 2. Surface chemistry (CMR) - mechanosynthesis platforms
+            print(f"\n🔬 Running surface adsorption benchmarks...")
+            results_cmr = runner.run_cmr_adsorption(backend)
+            runner.analyze_results(results_cmr, backend)
+            runner.save_results(results_cmr, 'cmr_adsorption', backend)
+            
+        # Run specific datasets if requested
+        elif args.dataset == 'cmr_adsorption':
             results = runner.run_cmr_adsorption(backend)
             runner.analyze_results(results, backend)
             runner.save_results(results, 'cmr_adsorption', backend)
+        elif args.dataset == 'htbh38':
+            # TODO: implement HTBH38 when available
+            print("HTBH38 not yet implemented")
             
         # Add other datasets here when implemented
         
