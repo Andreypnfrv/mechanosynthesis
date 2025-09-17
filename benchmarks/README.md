@@ -2,6 +2,21 @@
 
 This directory contains curated benchmark datasets for evaluating quantum chemistry methods in mechanosynthesis applications.
 
+## 🚀 **NEW COMPREHENSIVE BENCHMARK SUITE**
+
+**One command tests your method on ALL mechanosynthesis-relevant benchmarks:**
+- ✅ **Reaction barriers** (NHTBH38) - organic bond formation  
+- ✅ **Surface chemistry** (CMR) - STM tips, platforms, electrodes
+- 🔄 **Future benchmarks** (BH76, SBH17) - added automatically
+
+```bash
+# Test single method comprehensively
+PYTHONPATH=../py python run_benchmarks.py --backends dftb
+
+# Compare multiple methods with cross-backend summary
+PYTHONPATH=../py python run_benchmarks.py --backends dftb xtb orca-simple
+```
+
 ## Target Elements
 
 Our mechanosynthesis focus covers:
@@ -18,13 +33,13 @@ Our mechanosynthesis focus covers:
 
 ## Available Benchmark Datasets
 
-| Dataset | Size | Elements | Method | Accuracy | Status |
-|---------|------|----------|---------|----------|---------|
-| **NHTBH38** | 38 reactions | C,H,O,N,F,Cl | CCSD(T) | ±0.5 kcal/mol | ✅ **Implemented** |
-| **CMR Adsorption** | 25 metals × 8 adsorbates | H,Au,W,Cu,Pt,Ag + 20 more | PBE/LDA | ±0.1 eV | ✅ **Implemented** |
-| HTBH38  | 38 | C,H | CCSD(T) | ±0.5 kcal/mol | 🔄 Planned |
-| GMTKN55 | ~200* | C,H,O,N | CCSD(T) | ±0.3 kcal/mol | 🔄 Planned |
-| SSE17 | 17 | Fe,Co,Mn,Ni | Experimental | Variable | 🔄 Planned |
+| Dataset | Size | Elements | Method | Accuracy | Status | Auto-Run |
+|---------|------|----------|---------|----------|---------|----------|
+| **NHTBH38** | 38 reactions | C,H,O,N,F,Cl | CCSD(T) | ±0.5 kcal/mol | ✅ **Implemented** | ✅ **Default** |
+| **CMR Adsorption** | 25 metals × 8 adsorbates | H,Au,W,Cu,Pt,Ag + 20 more | PBE/LDA | ±0.1 eV | ✅ **Implemented** | ✅ **Default** |
+| BH76  | 76 reactions | C,H,O,N,F,Cl | CCSD(T) | ±0.3 kcal/mol | 🔄 **Next** | 🔄 Planned |
+| SBH17 | 17 surface reactions | H + metals | SRP-DFT | ±0.2 eV | 🔄 **Next** | 🔄 Planned |
+| HTBH38  | 38 H-transfer | C,H | CCSD(T) | ±0.5 kcal/mol | 🔄 Planned | 🔄 Optional |
 
 *mechanosynthesis-relevant subset
 
