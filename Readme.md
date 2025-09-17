@@ -5,7 +5,61 @@ TODO: yeah, maybe i should add some kind of installation script
 
 # How To Use
 
-`python3 py/main.py test` - proof that functions do work
+## Environment Setup
+```bash
+source .pyenv/bin/activate
+export SKDIR=/Users/andreypanferov/opt/dftb+/slakos/
+export PATH=/Users/andreypanferov/opt/dftb+/bin:$PATH
+```
+
+## Main Commands
+
+### Testing
+```bash
+python py/main.py test          # Run all tests
+python py/main.py test unified  # Test unified backend
+```
+
+### Parts Pipeline (Individual Molecules)
+```bash
+# Build molecule from SMILES or name
+python py/main.py build molecule H2O --project test_h2o
+
+# Relax structure with different backends
+python py/main.py relax PROJECT_NAME --backend dftb     # DFTB+ (main workhorse)
+python py/main.py relax PROJECT_NAME --backend xtb      # xTB native
+python py/main.py relax PROJECT_NAME --backend orca     # ORCA DFT
+
+# Calculate frequencies/Hessian for validation
+python py/main.py hessian PROJECT_NAME --backend dftb           # DFTB+ analytical (fast)
+python py/main.py hessian PROJECT_NAME --backend xtb            # xTB numerical
+python py/main.py hessian PROJECT_NAME --backend orca           # ORCA analytical
+python py/main.py hessian PROJECT_NAME --hessian-orca-simple    # ORCA PBE/def2-SVP (stable)
+
+# Thermochemistry analysis
+python py/main.py thermo PROJECT_NAME --plot --report --temperature-range 298,1500
+python py/main.py thermo PROJECT_NAME --animate --frames 30 --fps 5
+```
+
+### Sequences Pipeline (Multi-Component Scenes)
+```bash
+# Generate sequence frames
+python py/main.py sequence SCENE_NAME --generate --frame 0
+python py/main.py sequence SCENE_NAME --generate --frame 1
+```
+
+### Benchmarking
+```bash
+# Run benchmarks on datasets
+python benchmarks/run_benchmarks.py --dataset nhtbh38 --backend dftb
+python benchmarks/run_benchmarks.py --dataset cmr_adsorption --backend xtb
+python benchmarks/run_benchmarks.py --compare dftb,xtb
+```
+
+## Backend Recommendations
+- **Small molecules (<15 atoms)**: `--backend xtb` for speed or `--backend dftb` for accuracy
+- **Medium molecules (15-50 atoms)**: `--backend dftb` or `--hessian-orca-simple`
+- **Large molecules (>50 atoms)**: `--backend dftb` (fastest analytical methods)
 
 # Log
 
