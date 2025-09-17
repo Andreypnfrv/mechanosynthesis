@@ -90,31 +90,36 @@ Our mechanosynthesis focus covers:
 
 ## Usage
 
-### Basic Commands
+### 🎯 **Recommended Usage** (New Multi-Backend Architecture)
 
 ```bash
-# 🎯 COMPREHENSIVE BENCHMARK (RECOMMENDED)
-# Test single method on all benchmarks
-python benchmarks/run_benchmarks.py --backends dftb
-python benchmarks/run_benchmarks.py --backends xtb
+# Test single method comprehensively (NHTBH38 + CMR + future benchmarks)
+python run_benchmarks.py --backends dftb
+python run_benchmarks.py --backends xtb
 
-# Compare multiple methods (1-N backends vs benchmarks)
-python benchmarks/run_benchmarks.py --backends dftb xtb
-python benchmarks/run_benchmarks.py --backends dftb xtb orca-simple
+# Compare multiple methods with cross-backend summary table
+python run_benchmarks.py --backends dftb xtb
+python run_benchmarks.py --backends dftb xtb orca-simple
 
-# List available datasets/backends
-python benchmarks/run_benchmarks.py --list-datasets
-python benchmarks/run_benchmarks.py --list-backends
+# Get method recommendations for mechanosynthesis applications
+python run_benchmarks.py --backends dftb xtb  # → Auto-generates comparison summary
 ```
 
-### Advanced Usage
+### 📊 **Information Commands**
 ```bash
-# Run specific dataset only
-python benchmarks/run_benchmarks.py --dataset cmr_adsorption --backends xtb
+# List available datasets and backends
+python run_benchmarks.py --list-datasets
+python run_benchmarks.py --list-backends
+```
 
-# Legacy support (still works)
-python benchmarks/run_benchmarks.py --compare dftb,xtb
-python benchmarks/run_benchmarks.py --backend dftb
+### 🔧 **Advanced Usage**
+```bash
+# Run specific dataset with multiple backends
+python run_benchmarks.py --dataset cmr_adsorption --backends dftb xtb
+
+# Legacy support (comma-separated, still works)
+python run_benchmarks.py --compare dftb,xtb
+python run_benchmarks.py --backend dftb
 ```
 
 ## Results Storage
@@ -122,40 +127,61 @@ python benchmarks/run_benchmarks.py --backend dftb
 - **CMR data**: `benchmarks/cmr_adsorption/raw/`
 - **Summary reports**: Generated on demand
 
-## Method Recommendations for Mechanosynthesis
+## 🏆 **Auto-Generated Cross-Backend Comparison**
 
-| Application | Recommended Method | MAE | Notes |
-|-------------|-------------------|-----|-------|
-| **Organic reactions** | DFTB+ | 2.19 kcal/mol | Best accuracy for C-H bond formation |
-| **W STM tips** | xTB | 0.075 eV | 2× better than DFTB+ for W surfaces |
-| **Au platforms** | xTB | 0.456 eV | Better surface chemistry description |
-| **Mixed systems** | DFTB+ | - | More stable, broader applicability |
-| **High accuracy** | Orca PBE/def2-SVP | - | When accuracy is critical |
+When you run multiple backends, you get an automatic comparison summary:
+
+```
+🏆 CROSS-BACKEND COMPARISON SUMMARY
+============================================================
+
+📊 REACTION BARRIERS (NHTBH38)
+Method       MAE (kcal/mol)  RMSE (kcal/mol)  Status
+------------------------------------------------------------
+dftb         2.19           2.19              ✅ Good
+xtb          3.69           3.69              ⚠️ Fair
+
+🔬 SURFACE ADSORPTION (CMR)  
+Method       MAE vs PBE (eV)  MAE vs LDA (eV)  Status
+-------------------------------------------------------------
+dftb         0.569           0.523             ⚠️ Fair
+xtb          0.508           0.461             ⚠️ Fair
+
+🎯 MECHANOSYNTHESIS RECOMMENDATIONS
+==================================================
+• **Organic reactions**: DFTB+ best for C-H bond formation
+• **STM tips (W/Au)**: xTB best for surface interactions
+• **Mixed systems**: DFTB+ most robust across applications
+• **High accuracy**: Orca when precision is critical
+```
 
 ## Data Sources
 - **NHTBH38**: Curated subset from original 38 reaction barriers database
 - **CMR**: DTU Computational Materials Repository (https://cmrdb.fysik.dtu.dk/adsorption/)
 - All datasets include full attribution in respective metadata.yaml files
 
-## Quick Start
+## 🚀 **Quick Start**
 
 ```bash
 # Complete method evaluation (one command!)
 cd mechanosynthesis/benchmarks
 PYTHONPATH=../py python run_benchmarks.py --backends dftb
 
-# Compare DFTB+ vs xTB (with cross-backend summary!)
+# Compare DFTB+ vs xTB (with auto cross-backend summary!)
 PYTHONPATH=../py python run_benchmarks.py --backends dftb xtb
 ```
 
-This runs **comprehensive benchmark suite** covering:
+**Output**: Comprehensive method evaluation covering:
 - ✅ **Reaction barriers** (NHTBH38) - organic mechanosynthesis reactions  
 - ✅ **Surface chemistry** (CMR) - STM tips, platforms, electrodes
-- 🔄 **Future benchmarks** (BH76, SBH17) - added automatically
+- 🔄 **Future benchmarks** (BH76, SBH17) - auto-added when implemented
+- 🏆 **Cross-method comparison** - automatic when multiple backends specified
 
-## Future Plans
-1. **BH76 dataset** - 76 reaction barriers (broader coverage)
-2. **SBH17 dataset** - surface reaction barriers (chemisorption)  
-3. **W4-11 thermochemistry** - high-accuracy reference
-4. **Transition state search** integration
-5. **Machine learning** property predictions
+## 🗺️ **Roadmap** 
+| Priority | Dataset | Description | ETA |
+|----------|---------|-------------|-----|
+| 🔥 **HIGH** | **BH76** | 76 reaction barriers (broader NHTBH38) | Next |
+| 🔥 **HIGH** | **SBH17** | Surface reaction barriers (chemisorption) | Next |  
+| 🔶 **MED** | **W4-11** | High-accuracy thermochemistry reference | Later |
+| 🔶 **MED** | **Transition states** | Exact barrier calculations | Later |
+| 🔷 **LOW** | **ML predictions** | Property estimation models | Future |
